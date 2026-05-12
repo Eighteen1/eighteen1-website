@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard";
 
 export const metadata: Metadata = {
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 const apps = [
   {
     title: "Car Sounds",
+    icon: "/images/apps/car-sounds.png",
     description:
       "In times of engine downsizing and electric cars, this app keeps our ears supplied with a big and diverse collection of the world's best sounding cars.",
     storeLinks: [
@@ -25,6 +27,7 @@ const apps = [
   },
   {
     title: "Car Quiz",
+    icon: "/images/apps/car-quiz.png",
     description:
       "Car Quiz offers six fun and challenging single-player quiz modes, alongside a state-of-the-art Multiplayer mode all centered around the automobile industry.",
     storeLinks: [
@@ -40,6 +43,7 @@ const apps = [
   },
   {
     title: "Motorcycle Sounds",
+    icon: "/images/apps/motorcycle-sounds.png",
     description:
       "After the success of our Car Sounds app, we decided to publish Motorcycle Sounds — our first app targeted at motorcycle enthusiasts.",
     storeLinks: [
@@ -61,6 +65,13 @@ export default function CarCultPage() {
       {/* Hero */}
       <section className="px-6 py-24 text-center">
         <div className="mx-auto max-w-3xl">
+          <Image
+            src="/images/car-cult-logo.png"
+            alt="Car Cult"
+            width={120}
+            height={120}
+            className="mx-auto mb-8 rounded-3xl"
+          />
           <p className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
             A Brand for Car Enthusiasts
           </p>
@@ -70,8 +81,7 @@ export default function CarCultPage() {
           <p className="mt-6 text-lg leading-relaxed text-muted">
             At Car Cult, we built a brand tailored for car enthusiasts. While app
             development is our primary focus, Car Cult extends beyond apps. Our
-            brand features a YouTube channel and an engaging Instagram page
-            designed to foster a vibrant community of car lovers.
+            brand features a YouTube channel designed to foster a vibrant community of car lovers.
           </p>
         </div>
       </section>
@@ -106,23 +116,6 @@ export default function CarCultPage() {
               className="mt-6 inline-block text-sm font-medium text-accent hover:underline"
             >
               Visit Channel &rarr;
-            </a>
-          </div>
-
-          <div className="rounded-2xl border border-border bg-surface p-8">
-            <h3 className="text-xl font-bold">Car Cult on Instagram</h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
-              Follow us on Instagram at @official_carcult for the latest car
-              content, community highlights, and behind-the-scenes looks at our
-              development process.
-            </p>
-            <a
-              href="https://www.instagram.com/official_carcult/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block text-sm font-medium text-accent hover:underline"
-            >
-              Follow Us &rarr;
             </a>
           </div>
         </div>

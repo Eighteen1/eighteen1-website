@@ -33,7 +33,7 @@ export default function Footer() {
             Legal
           </h3>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/privacy" className="text-muted hover:text-foreground transition-colors">Privacy Policy</Link></li>
+            <li><Link href="/privacy-policy" className="text-muted hover:text-foreground transition-colors">Privacy Policy</Link></li>
             <li><Link href="/terms" className="text-muted hover:text-foreground transition-colors">Terms of Service</Link></li>
             <li><Link href="/delete-data" className="text-muted hover:text-foreground transition-colors">Delete User Data</Link></li>
           </ul>
@@ -59,7 +59,7 @@ export default function Footer() {
             </li>
             <li className="pt-2">
               <a
-                href="https://www.instagram.com/official_carcult/"
+                href="https://www.instagram.com/eighteen1_studios/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-foreground transition-colors"
