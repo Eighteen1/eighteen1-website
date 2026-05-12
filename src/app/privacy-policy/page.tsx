@@ -150,61 +150,6 @@ export default function PrivacyPage() {
             on this page.
           </p>
 
-          <div className="mt-4 rounded-2xl border border-border bg-surface p-8">
-            <h2 className="text-lg font-bold text-foreground">
-              Concerning Our App &quot;Car Sounds&quot; Only
-            </h2>
-            <h3 className="mt-4 text-base font-semibold text-foreground">
-              Survey Serving Technology
-            </h3>
-            <p className="mt-3">
-              This app uses Pollfish SDK. Pollfish is an on-line survey platform,
-              through which, anyone may conduct surveys. Pollfish collaborates
-              with Publishers of applications for smartphones in order to have
-              access to users of such applications and address survey
-              questionnaires to them.
-            </p>
-            <p className="mt-3">
-              When a user connects to this app, a specific set of user&apos;s
-              device data (including Advertising ID, Device ID, other available
-              electronic identifiers and further response meta-data) is
-              automatically sent, via our app, to Pollfish servers, in order for
-              Pollfish to discern whether the user is eligible for a survey.
-            </p>
-            <p className="mt-3">
-              For a full list of data received by Pollfish through this app,
-              please read carefully the{" "}
-              <a
-                href="https://www.pollfish.com/terms/respondent"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:underline"
-              >
-                Pollfish respondent terms
-              </a>
-              . These data will be associated with your answers to the
-              questionnaires whenever Pollfish sends such questionnaires to
-              eligible users. Pollfish may share such data with third parties,
-              clients and business partners, for commercial purposes.
-            </p>
-            <p className="mt-3">
-              By downloading the application, you accept this privacy policy
-              document and you hereby give your consent for the processing by
-              Pollfish of the aforementioned data. Furthermore, you are informed
-              that you may disable Pollfish operation at any time by visiting the
-              following link:{" "}
-              <a
-                href="https://www.pollfish.com/respondent/opt-out"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:underline"
-              >
-                Pollfish Opt-Out
-              </a>
-              .
-            </p>
-          </div>
-
           <h2 className="pt-4 text-lg font-bold text-foreground">Contact Us</h2>
           <p>
             If you have any questions or suggestions about our Privacy Policy, do
