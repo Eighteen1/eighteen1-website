@@ -52,6 +52,11 @@ export default function Footer() {
                 info@eighteen1.com
               </a>
             </li>
+            <li>
+              <a href="mailto:eighteen1.studios@gmail.com" className="hover:text-foreground transition-colors">
+                eighteen1.studios@gmail.com
+              </a>
+            </li>
             <li className="pt-2">
               <a
                 href="https://www.instagram.com/official_carcult/"

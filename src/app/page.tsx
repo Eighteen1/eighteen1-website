@@ -103,6 +103,15 @@ export default function Home() {
               </a>
             </p>
             <p>
+              Optional:{" "}
+              <a
+                href="mailto:eighteen1.studios@gmail.com"
+                className="text-accent hover:underline"
+              >
+                eighteen1.studios@gmail.com
+              </a>
+            </p>
+            <p>
               Website:{" "}
               <a
                 href="https://eighteen1.com"

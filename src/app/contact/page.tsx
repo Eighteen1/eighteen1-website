@@ -38,6 +38,13 @@ export default function ContactPage() {
                 >
                   info@eighteen1.com
                 </a>
+                <br />
+                <a
+                  href="mailto:eighteen1.studios@gmail.com"
+                  className="text-accent hover:underline"
+                >
+                  eighteen1.studios@gmail.com
+                </a>
               </div>
               <div>
                 <p className="font-medium text-foreground">Phone</p>

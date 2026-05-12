@@ -22,9 +22,15 @@ export default function ContactForm() {
       const url = process.env.NEXT_PUBLIC_SUPABASE_FUNCTION_URL;
       if (!url) throw new Error("Contact endpoint is not configured.");
 
+      const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+      if (!anonKey) throw new Error("Contact endpoint is not configured.");
+
       const res = await fetch(url, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${anonKey}`,
+        },
         body: JSON.stringify(data),
       });
 
