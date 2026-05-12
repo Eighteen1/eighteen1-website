@@ -1,65 +1,120 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* Hero */}
+      <section className="flex min-h-[85vh] flex-col items-center justify-center px-6 text-center">
+        <p className="mb-4 text-sm font-medium uppercase tracking-widest text-accent">
+          App Development Studio
+        </p>
+        <h1 className="max-w-3xl text-5xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+          Welcome to{" "}
+          <span className="text-accent">Eighteen1&nbsp;Studios</span>
+        </h1>
+        <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+          We build high-quality mobile applications for Android and iOS. From
+          concept to launch, we craft experiences people love.
+        </p>
+        <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <Link
+            href="/projects"
+            className="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+          >
+            Our Projects
+          </Link>
+          <Link
+            href="/contact"
+            className="rounded-lg border border-border px-6 py-3 text-sm font-semibold text-muted transition-colors hover:border-accent hover:text-accent"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </section>
+
+      {/* What We Do */}
+      <section className="border-t border-border bg-surface px-6 py-24">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold sm:text-4xl">What We Do</h2>
+          <p className="mt-6 text-lg leading-relaxed text-muted">
+            Our journey started in 2016 in Germany when we published our first
+            Android app under our former company name C.Mrg Studios. Since then
+            our company evolved and eventually became what it is today:
+            Eighteen1&nbsp;Studios.
           </p>
+
+          <div className="mt-14 grid gap-8 sm:grid-cols-2">
+            <div className="rounded-2xl border border-border bg-background p-8">
+              <h3 className="text-xl font-bold">App Development</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted">
+                We focus on high-quality app development for Android and iOS
+                phones. Although our main focus lays in creating our own
+                products, we are also open to help you with the development of
+                your app.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-background p-8">
+              <h3 className="text-xl font-bold">Car Cult Brand</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted">
+                Our Car Cult brand caters to car enthusiasts with popular apps
+                like Car Sounds, Car Quiz, and Motorcycle Sounds, alongside a
+                growing YouTube and Instagram presence.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      {/* Contact CTA */}
+      <section className="px-6 py-24 text-center">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Interested in working with us?
+          </h2>
+          <p className="mt-4 text-lg text-muted">
+            Whether you have a project idea or just want to say hello, we&apos;d
+            love to hear from you.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Contact Us
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Imprint */}
+      <section className="border-t border-border bg-surface px-6 py-16">
+        <div className="mx-auto max-w-4xl">
+          <h2 className="text-2xl font-bold">Imprint</h2>
+          <div className="mt-6 space-y-1 text-sm text-muted">
+            <p>Eighteen1 Studios</p>
+            <p>Tiefenthaler Stra&szlig;e 32A</p>
+            <p>26810 Westoverledingen, Germany</p>
+            <p className="pt-3">Phone: +49 173 5822770</p>
+            <p>
+              Email:{" "}
+              <a
+                href="mailto:info@eighteen1.com"
+                className="text-accent hover:underline"
+              >
+                info@eighteen1.com
+              </a>
+            </p>
+            <p>
+              Website:{" "}
+              <a
+                href="https://eighteen1.com"
+                className="text-accent hover:underline"
+              >
+                eighteen1.com
+              </a>
+            </p>
+            <p className="pt-3">Authorized Representative: Raphael Pappalardo</p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
