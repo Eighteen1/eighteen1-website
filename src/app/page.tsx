@@ -13,7 +13,7 @@ export default function Home() {
           <span className="text-accent">Eighteen1&nbsp;Studios</span>
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-          We build high-quality mobile applications for Android and iOS. From
+          We build high-quality applications for Android, iOS and Web. From
           concept to launch, we craft experiences people love.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -47,8 +47,8 @@ export default function Home() {
             <div className="rounded-2xl border border-border bg-background p-8">
               <h3 className="text-xl font-bold">App Development</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">
-                We focus on high-quality app development for Android and iOS
-                phones. Although our main focus lays in creating our own
+                We focus on high-quality app development for Android, iOS and Web
+                applications. Although our main focus lies in creating our own
                 products, we are also open to help you with the development of
                 your app.
               </p>

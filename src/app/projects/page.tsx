@@ -5,10 +5,27 @@ import ProjectCard from "@/components/ProjectCard";
 export const metadata: Metadata = {
   title: "Our Projects",
   description:
-    "iOS and Android apps by Eighteen1 Studios — Byde, Car Sounds, Car Quiz, Motorcycle Sounds, and PuzzleWord.",
+    "Apps and web products by Eighteen1 Studios — pleaseopen.me, Byde, Car Sounds, Car Quiz, Motorcycle Sounds, and PuzzleWord.",
 };
 
 const projects = [
+  {
+    title: "pleaseopen.me",
+    icon: "/images/apps/pleaseopen-me.png",
+    highlight: "Web App",
+    description:
+      "Bio link that opens the right App Store / Play Store — and escapes TikTok & Instagram in-app browser blocks. Use it as a free redirect, a multi-button social page, or on your own custom domain. Works standalone or as a drop-in replacement for the store button on Linktree, Beacons, or your own site.",
+    storeLinks: [
+      {
+        label: "Visit pleaseopen.me",
+        url: "https://pleaseopen.me",
+      },
+      {
+        label: "Guides",
+        url: "https://pleaseopen.me/blog",
+      },
+    ],
+  },
   {
     title: "Car Sounds",
     icon: "/images/apps/car-sounds.png",
@@ -88,7 +105,7 @@ export default function ProjectsPage() {
           Our Projects
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted">
-          All our iOS and Android apps currently available for download. Apps
+          Our iOS and Android apps, plus the web products we ship. Apps
           developed for clients are not included.
         </p>
 
@@ -99,8 +116,15 @@ export default function ProjectsPage() {
             description="Byde is a wardrobe intelligence app built for men. It learns your clothes, reads the weather, understands your plans, and builds you a complete outfit from pieces you actually own — ready in seconds. Plan your week, pack for trips with a day-by-day outfit schedule, discover closet analytics, and gradually refine your personal style."
             icon="/images/apps/byde-icon.webp"
             screenshot="/images/apps/byde-screenshot.png"
-            appStoreUrl="https://apps.apple.com/app/id6761620791"
-            websiteUrl="bydeapp.de"
+            badge="New Release"
+            primaryCta={{
+              label: "Download on the App Store",
+              url: "https://apps.apple.com/app/id6761620791",
+            }}
+            secondaryCta={{
+              label: "bydeapp.de",
+              url: "https://bydeapp.de",
+            }}
           />
 
           {projects.map((project) => (

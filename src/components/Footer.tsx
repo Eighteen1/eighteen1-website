@@ -10,7 +10,7 @@ export default function Footer() {
             EIGHTEEN1 <span className="text-accent">STUDIOS</span>
           </p>
           <p className="mt-2 text-sm text-muted">
-            High-quality app development for Android&nbsp;&amp;&nbsp;iOS.
+            High-quality app development for Android, iOS and Web.
           </p>
         </div>
 
@@ -22,6 +22,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link href="/" className="text-muted hover:text-foreground transition-colors">Start</Link></li>
             <li><Link href="/projects" className="text-muted hover:text-foreground transition-colors">Our Projects</Link></li>
+            <li><Link href="/blog" className="text-muted hover:text-foreground transition-colors">Blog</Link></li>
             <li><Link href="/car-cult" className="text-muted hover:text-foreground transition-colors">Car Cult</Link></li>
             <li><Link href="/contact" className="text-muted hover:text-foreground transition-colors">Contact</Link></li>
           </ul>
