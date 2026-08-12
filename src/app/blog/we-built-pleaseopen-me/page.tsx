@@ -231,6 +231,53 @@ export default function WeBuiltPleaseOpenMePage() {
           </p>
         </div>
 
+        <aside className="mt-14 border-t border-border pt-10">
+          <h2 className="text-xl font-bold text-foreground">Further reading</h2>
+          <p className="mt-2 text-sm text-muted">
+            More on this topic from eighteen1 elsewhere:
+          </p>
+          <ul className="mt-6 space-y-4">
+            <li>
+              <a
+                href="https://medium.com/@eighteen1.studios/your-app-store-link-is-broken-on-tiktok-and-instagram-and-you-probably-dont-know-it-4e600ba2dea1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  Medium
+                </span>
+                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  Your App Store link is broken on TikTok and Instagram — and
+                  you probably don&apos;t know it
+                </span>
+                <span className="mt-2 block text-xs text-muted">
+                  medium.com/@eighteen1.studios &rarr;
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/posts/raphael-pappalardo-8569a0211_hey-everyone-i-dont-normally-post-here-ugcPost-7491431285010137088-2EqU/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  LinkedIn
+                </span>
+                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  Why App Store links fail inside TikTok&apos;s in-app browser —
+                  and a free fix we built
+                </span>
+                <span className="mt-2 block text-xs text-muted">
+                  linkedin.com/in/raphael-pappalardo &rarr;
+                </span>
+              </a>
+            </li>
+          </ul>
+        </aside>
+
         <footer className="mt-14 flex flex-wrap items-center gap-4 border-t border-border pt-8">
           <Link
             href="/projects"
