@@ -8,6 +8,14 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "privacy-policy-generation-pleaseopen-me",
+    title: "We added privacy policy generation + hosting to pleaseopen.me",
+    description:
+      "pleaseopen.me now generates and hosts an app-specific privacy policy URL you can drop into App Store Connect or Play Console — no developer website required.",
+    date: "2026-08-15",
+    author: "eighteen1",
+  },
+  {
     slug: "we-built-pleaseopen-me",
     title:
       "We built pleaseopen.me — a free fix for App Store links blocked on TikTok and Instagram",
