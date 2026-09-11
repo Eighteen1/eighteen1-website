@@ -8,6 +8,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "os-specific-landing-pages-pleaseopen-me",
+    title:
+      "We added coming-soon landing pages for stores you haven't shipped to yet",
+    description:
+      "pleaseopen.me now detects the visitor's OS and shows a dedicated landing state for platforms you haven't shipped to — protecting store conversion data and capturing demand.",
+    date: "2026-09-11",
+    author: "eighteen1",
+  },
+  {
     slug: "privacy-policy-generation-pleaseopen-me",
     title: "We added privacy policy generation + hosting to pleaseopen.me",
     description:
