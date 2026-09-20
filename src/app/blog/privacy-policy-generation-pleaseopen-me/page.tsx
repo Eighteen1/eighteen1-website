@@ -184,6 +184,42 @@ export default function PrivacyPolicyGenerationPleaseOpenMePage() {
           <ul className="mt-6 space-y-4">
             <li>
               <a
+                href="https://www.pleaseopen.me/blog/privacy-policy-for-indie-app-developers"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  pleaseopen.me
+                </span>
+                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  Privacy policy for indie app developers
+                </span>
+                <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
+                  Read more &rarr;
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.pleaseopen.me/blog/app-ads-txt-explained"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  pleaseopen.me
+                </span>
+                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  app-ads.txt explained
+                </span>
+                <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
+                  Read more &rarr;
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://medium.com/@eighteen1.studios/what-indie-developers-actually-need-in-a-privacy-policy-025635b66e2a"
                 target="_blank"
                 rel="noopener noreferrer"

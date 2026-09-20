@@ -234,9 +234,63 @@ export default function WeBuiltPleaseOpenMePage() {
         <aside className="mt-14 border-t border-border pt-10">
           <h2 className="text-xl font-bold text-foreground">Further reading</h2>
           <p className="mt-2 text-sm text-muted">
-            More on this topic from eighteen1 elsewhere:
+            More on this topic from eighteen1 and pleaseopen.me:
           </p>
           <ul className="mt-6 space-y-4">
+            <li>
+              <a
+                href="https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  pleaseopen.me
+                </span>
+                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  App Store links failing on TikTok and Instagram
+                </span>
+                <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
+                  Read more &rarr;
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.pleaseopen.me/blog/instagram-appstore-links-blocked"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  pleaseopen.me
+                </span>
+                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  Instagram blocking App Store links
+                </span>
+                <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
+                  Read more &rarr;
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.pleaseopen.me/blog/tiktok-bio-link-appstore-broken"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  pleaseopen.me
+                </span>
+                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  TikTok bio link to the App Store not working
+                </span>
+                <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
+                  Read more &rarr;
+                </span>
+              </a>
+            </li>
             <li>
               <a
                 href="https://medium.com/@eighteen1.studios/your-app-store-link-is-broken-on-tiktok-and-instagram-and-you-probably-dont-know-it-4e600ba2dea1"

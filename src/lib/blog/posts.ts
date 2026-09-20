@@ -8,6 +8,15 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "tiktok-instagram-blocking-app-store-links-pleaseopen-me",
+    title:
+      "Why TikTok and Instagram block App Store links — and how we fixed it for Byde",
+    description:
+      "TikTok and Instagram block App Store and Play Store links in their in-app browsers, breaking bio-link installs. Here's why it happens, what \"Action can't be completed\" means, and how we fixed it for Byde with pleaseopen.me.",
+    date: "2026-09-20",
+    author: "eighteen1",
+  },
+  {
     slug: "os-specific-landing-pages-pleaseopen-me",
     title:
       "We added coming-soon landing pages for stores you haven't shipped to yet",

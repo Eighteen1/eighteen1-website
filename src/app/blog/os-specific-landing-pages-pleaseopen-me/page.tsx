@@ -191,6 +191,69 @@ export default function OsSpecificLandingPagesPleaseOpenMePage() {
           </p>
         </div>
 
+        <aside className="mt-14 border-t border-border pt-10">
+          <h2 className="text-xl font-bold text-foreground">Further reading</h2>
+          <p className="mt-2 text-sm text-muted">
+            Related guides on pleaseopen.me:
+          </p>
+          <ul className="mt-6 space-y-4">
+            <li>
+              <a
+                href="https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  pleaseopen.me
+                </span>
+                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  App Store links failing on TikTok and Instagram
+                </span>
+                <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
+                  Read more &rarr;
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.pleaseopen.me/blog/privacy-policy-for-indie-app-developers"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  pleaseopen.me
+                </span>
+                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  Privacy policy for indie app developers
+                </span>
+                <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
+                  Read more &rarr;
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.pleaseopen.me/blog/app-ads-txt-explained"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-accent">
+                  pleaseopen.me
+                </span>
+                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
+                  app-ads.txt explained
+                </span>
+                <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
+                  Read more &rarr;
+                </span>
+              </a>
+            </li>
+          </ul>
+        </aside>
+
         <footer className="mt-14 flex flex-wrap items-center gap-4 border-t border-border pt-8">
           <Link
             href="/projects"
