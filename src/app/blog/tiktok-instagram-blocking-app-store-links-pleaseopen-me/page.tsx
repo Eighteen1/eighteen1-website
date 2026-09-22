@@ -3,7 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import AutoplayVideo from "@/components/AutoplayVideo";
-import { formatPostDate, getPost } from "@/lib/blog/posts";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import {
+  APP_STORE_LINK_POST_ALTERNATES,
+  formatPostDate,
+  getPost,
+} from "@/lib/blog/posts";
 
 const SLUG = "tiktok-instagram-blocking-app-store-links-pleaseopen-me";
 
@@ -14,6 +19,12 @@ export const metadata: Metadata = {
     "TikTok and Instagram block App Store and Play Store links in their in-app browsers, breaking bio-link installs. Here's why it happens, what \"Action can't be completed\" means, and how we fixed it for Byde with pleaseopen.me.",
   alternates: {
     canonical: `https://eighteen1.com/blog/${SLUG}`,
+    languages: {
+      en: `https://eighteen1.com${APP_STORE_LINK_POST_ALTERNATES.en}`,
+      de: `https://eighteen1.com${APP_STORE_LINK_POST_ALTERNATES.de}`,
+      ko: `https://eighteen1.com${APP_STORE_LINK_POST_ALTERNATES.ko}`,
+      es: `https://eighteen1.com${APP_STORE_LINK_POST_ALTERNATES.es}`,
+    },
   },
   openGraph: {
     title:
@@ -60,6 +71,7 @@ export default function TikTokInstagramBlockingAppStoreLinksPage() {
           <p className="mt-5 text-lg leading-relaxed text-muted">
             {post.description}
           </p>
+          <LanguageSwitcher current="en" />
         </header>
 
         <div className="mt-10 space-y-6 text-base leading-relaxed text-muted">

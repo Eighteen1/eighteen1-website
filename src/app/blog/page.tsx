@@ -29,12 +29,19 @@ export default function BlogIndexPage() {
               key={post.slug}
               className="group rounded-2xl border border-border bg-surface p-8 transition-colors hover:border-accent/40 hover:bg-surface-hover"
             >
-              <time
-                dateTime={post.date}
-                className="text-xs font-medium uppercase tracking-wider text-muted"
-              >
-                {formatPostDate(post.date)}
-              </time>
+              <div className="flex flex-wrap items-center gap-3">
+                <time
+                  dateTime={post.date}
+                  className="text-xs font-medium uppercase tracking-wider text-muted"
+                >
+                  {formatPostDate(post.date)}
+                </time>
+                {post.languageLabel && (
+                  <span className="rounded-full bg-accent/15 px-2.5 py-0.5 text-xs font-semibold text-accent">
+                    {post.languageLabel}
+                  </span>
+                )}
+              </div>
               <h2 className="mt-3 text-xl font-bold leading-snug sm:text-2xl">
                 <Link
                   href={`/blog/${post.slug}`}

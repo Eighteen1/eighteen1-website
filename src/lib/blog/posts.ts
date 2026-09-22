@@ -4,7 +4,16 @@ export interface BlogPost {
   description: string;
   date: string;
   author: string;
+  locale?: "en" | "de" | "ko" | "es";
+  languageLabel?: string;
 }
+
+export const APP_STORE_LINK_POST_ALTERNATES = {
+  en: "/blog/tiktok-instagram-blocking-app-store-links-pleaseopen-me",
+  de: "/blog/warum-tiktok-instagram-app-store-links-blockieren-pleaseopen-me",
+  ko: "/blog/tiktok-instagram-app-store-link-chaedan-pleaseopen-me",
+  es: "/blog/por-que-tiktok-instagram-bloquean-enlaces-app-store-pleaseopen-me",
+} as const;
 
 export const posts: BlogPost[] = [
   {
@@ -15,6 +24,41 @@ export const posts: BlogPost[] = [
       "TikTok and Instagram block App Store and Play Store links in their in-app browsers, breaking bio-link installs. Here's why it happens, what \"Action can't be completed\" means, and how we fixed it for Byde with pleaseopen.me.",
     date: "2026-09-20",
     author: "eighteen1",
+    locale: "en",
+    languageLabel: "English",
+  },
+  {
+    slug: "warum-tiktok-instagram-app-store-links-blockieren-pleaseopen-me",
+    title:
+      "Warum TikTok und Instagram App-Store-Links blockieren – und wie du das mit pleaseopen.me löst",
+    description:
+      "TikTok und Instagram blockieren App-Store- und Play-Store-Links in ihren In-App-Browsern. Erfahre, warum das passiert und wie du mit pleaseopen.me einen einzigen Link für deine App einrichtest.",
+    date: "2026-09-20",
+    author: "eighteen1",
+    locale: "de",
+    languageLabel: "Deutsch",
+  },
+  {
+    slug: "tiktok-instagram-app-store-link-chaedan-pleaseopen-me",
+    title:
+      "TikTok과 Instagram이 App Store 링크를 차단하는 이유 – 그리고 pleaseopen.me로 해결하는 방법",
+    description:
+      "TikTok과 Instagram은 In-App Browser에서 App Store 및 Play Store 링크를 차단합니다. 왜 이런 일이 발생하는지, 그리고 pleaseopen.me를 사용해 앱을 위한 하나의 링크를 설정하는 방법을 알아보세요.",
+    date: "2026-09-20",
+    author: "eighteen1",
+    locale: "ko",
+    languageLabel: "한국어",
+  },
+  {
+    slug: "por-que-tiktok-instagram-bloquean-enlaces-app-store-pleaseopen-me",
+    title:
+      "Por qué TikTok e Instagram bloquean los enlaces de App Store – y cómo solucionarlo con pleaseopen.me",
+    description:
+      "TikTok e Instagram bloquean los enlaces de App Store y Play Store en sus In-App Browser. Descubre por qué ocurre y cómo configurar un único enlace para tu app con pleaseopen.me.",
+    date: "2026-09-20",
+    author: "eighteen1",
+    locale: "es",
+    languageLabel: "Español",
   },
   {
     slug: "os-specific-landing-pages-pleaseopen-me",
@@ -48,8 +92,8 @@ export function getPost(slug: string): BlogPost | undefined {
   return posts.find((post) => post.slug === slug);
 }
 
-export function formatPostDate(date: string): string {
-  return new Date(date + "T12:00:00").toLocaleDateString("en-US", {
+export function formatPostDate(date: string, locale = "en-US"): string {
+  return new Date(date + "T12:00:00").toLocaleDateString(locale, {
     year: "numeric",
     month: "long",
     day: "numeric",
