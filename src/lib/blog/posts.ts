@@ -6,6 +6,8 @@ export interface BlogPost {
   author: string;
   locale?: "en" | "de" | "ko" | "es";
   languageLabel?: string;
+  /** Ambiguous label for low-key /blog index links (unlisted posts). */
+  indexLabel?: string;
 }
 
 export const APP_STORE_LINK_POST_ALTERNATES = {
@@ -88,8 +90,29 @@ export const posts: BlogPost[] = [
   },
 ];
 
+/** Indexed for SEO / sitemap but not shown as cards on /blog. */
+export const unlistedPosts: BlogPost[] = [
+  {
+    slug: "tiktok-instagram-blocking-onlyfans-link-pleaseopen-me",
+    title:
+      "How to Stop Instagram and TikTok From Blocking Your OnlyFans Link in 2026",
+    description:
+      "Why Instagram and TikTok hide or break OnlyFans and Fansly bio links — and the two-layer setup (link-in-bio + pleaseopen.me redirect, optionally on your own domain) creators use to keep them working.",
+    date: "2026-09-26",
+    author: "eighteen1",
+    indexLabel: "Bio links that get blocked on Instagram & TikTok",
+  },
+];
+
 export function getPost(slug: string): BlogPost | undefined {
-  return posts.find((post) => post.slug === slug);
+  return (
+    posts.find((post) => post.slug === slug) ??
+    unlistedPosts.find((post) => post.slug === slug)
+  );
+}
+
+export function getAllPostsForSitemap(): BlogPost[] {
+  return [...posts, ...unlistedPosts];
 }
 
 export function formatPostDate(date: string, locale = "en-US"): string {

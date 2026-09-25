@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { formatPostDate, posts } from "@/lib/blog/posts";
+import { formatPostDate, posts, unlistedPosts } from "@/lib/blog/posts";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -62,6 +62,23 @@ export default function BlogIndexPage() {
             </article>
           ))}
         </div>
+
+        {unlistedPosts.length > 0 && (
+          <p className="mt-12 text-xs leading-relaxed text-muted/70">
+            Other articles:{" "}
+            {unlistedPosts.map((post, index) => (
+              <span key={post.slug}>
+                {index > 0 && " · "}
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="underline-offset-2 hover:text-muted hover:underline"
+                >
+                  {post.indexLabel ?? post.title}
+                </Link>
+              </span>
+            ))}
+          </p>
+        )}
       </div>
     </section>
   );
