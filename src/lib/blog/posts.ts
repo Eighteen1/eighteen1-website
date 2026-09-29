@@ -19,6 +19,15 @@ export const APP_STORE_LINK_POST_ALTERNATES = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "tiktok-creators-unaware-broken-app-store-bio-links",
+    title:
+      "We Found Hundreds of TikTok Creators With Broken App Store Links. Most Don't Know.",
+    description:
+      "While researching TikTok marketing for our app, we noticed a pattern: creators with App Store links in their bio that fail on iPhones, and they keep posting anyway. Here's what we learned.",
+    date: "2026-09-29",
+    author: "eighteen1",
+  },
+  {
     slug: "tiktok-instagram-blocking-app-store-links-pleaseopen-me",
     title:
       "Why TikTok and Instagram block App Store links — and how we fixed it for Byde",
