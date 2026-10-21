@@ -8,6 +8,7 @@ import {
   formatPostDate,
   getPost,
 } from "@/lib/blog/posts";
+import { productUrl } from "@/lib/blog/refs";
 
 const SLUG = "por-que-tiktok-instagram-bloquean-enlaces-app-store-pleaseopen-me";
 
@@ -85,7 +86,7 @@ export default function TikTokInstagramBlockingEsPage() {
             Nos encontramos exactamente con este problema al promocionar
             nuestras propias apps y por eso desarrollamos{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -336,7 +337,7 @@ export default function TikTokInstagramBlockingEsPage() {
           <p>
             Abre{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -440,7 +441,7 @@ export default function TikTokInstagramBlockingEsPage() {
             Si quieres configurar un único enlace para tu app, puedes empezar
             gratis con{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -487,7 +488,7 @@ export default function TikTokInstagramBlockingEsPage() {
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram"
+                href={productUrl("https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -523,7 +524,7 @@ export default function TikTokInstagramBlockingEsPage() {
             Ver proyectos
           </Link>
           <a
-            href="https://pleaseopen.me/claim"
+            href={productUrl("https://pleaseopen.me/claim", SLUG)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatPostDate, getPost } from "@/lib/blog/posts";
+import { productUrl } from "@/lib/blog/refs";
 
 const SLUG = "privacy-policy-generation-pleaseopen-me";
 
@@ -63,7 +64,7 @@ export default function PrivacyPolicyGenerationPleaseOpenMePage() {
             We ran into this ourselves enough times that we decided to build it
             into{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -163,7 +164,7 @@ export default function PrivacyPolicyGenerationPleaseOpenMePage() {
           </p>
           <p>
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               Generate and host your privacy policy free &rarr;
@@ -184,7 +185,7 @@ export default function PrivacyPolicyGenerationPleaseOpenMePage() {
           <ul className="mt-6 space-y-4">
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/privacy-policy-for-indie-app-developers"
+                href={productUrl("https://www.pleaseopen.me/blog/privacy-policy-for-indie-app-developers", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -202,7 +203,7 @@ export default function PrivacyPolicyGenerationPleaseOpenMePage() {
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/app-ads-txt-explained"
+                href={productUrl("https://www.pleaseopen.me/blog/app-ads-txt-explained", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -266,7 +267,7 @@ export default function PrivacyPolicyGenerationPleaseOpenMePage() {
             See our projects
           </Link>
           <a
-            href="https://pleaseopen.me"
+            href={productUrl("https://pleaseopen.me", SLUG)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"

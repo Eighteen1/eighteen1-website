@@ -8,6 +8,7 @@ import {
   formatPostDate,
   getPost,
 } from "@/lib/blog/posts";
+import { productUrl } from "@/lib/blog/refs";
 
 const SLUG = "tiktok-instagram-app-store-link-chaedan-pleaseopen-me";
 
@@ -84,7 +85,7 @@ export default function TikTokInstagramBlockingKoPage() {
             저희도 자체 앱을 마케팅하면서 정확히 이런 문제를 경험했고, 이를
             해결하기 위해{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -322,7 +323,7 @@ export default function TikTokInstagramBlockingKoPage() {
           </h3>
           <p>
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -420,7 +421,7 @@ export default function TikTokInstagramBlockingKoPage() {
           <p>
             앱을 위한 하나의 링크를 설정하고 싶다면{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -465,7 +466,7 @@ export default function TikTokInstagramBlockingKoPage() {
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram"
+                href={productUrl("https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -501,7 +502,7 @@ export default function TikTokInstagramBlockingKoPage() {
             프로젝트 보기
           </Link>
           <a
-            href="https://pleaseopen.me/claim"
+            href={productUrl("https://pleaseopen.me/claim", SLUG)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"

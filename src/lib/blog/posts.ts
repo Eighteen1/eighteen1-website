@@ -102,11 +102,30 @@ export const posts: BlogPost[] = [
 /** Indexed for SEO / sitemap but not shown as cards on /blog. */
 export const unlistedPosts: BlogPost[] = [
   {
+    slug: "subs-vs-onlyfans-for-creators-2026",
+    title: "Subs vs OnlyFans for Creators: What's Different (2026)",
+    description:
+      "Subs or OnlyFans? A plain comparison of payouts, fees, content rules, discovery and fan payments in 2026, plus how to promote either one without broken links.",
+    date: "2026-10-21",
+    author: "eighteen1",
+    indexLabel: "Comparing creator subscription platforms in 2026",
+  },
+  {
+    slug: "best-link-in-bio-for-onlyfans-creators-2026",
+    title:
+      "Best Link in Bio for OnlyFans Creators in 2026: What Actually Matters",
+    description:
+      "Choosing a link in bio as an OnlyFans creator? Here's what to look for in 2026, the mistakes that get links flagged, and how Linktree, Beacons and fanfor.me compare.",
+    date: "2026-10-21",
+    author: "eighteen1",
+    indexLabel: "What to look for in a creator bio link",
+  },
+  {
     slug: "tiktok-instagram-blocking-onlyfans-link-pleaseopen-me",
     title:
       "How to Stop Instagram and TikTok From Blocking Your OnlyFans Link in 2026",
     description:
-      "Why Instagram and TikTok hide or break OnlyFans and Fansly bio links — and the two-layer setup (link-in-bio + pleaseopen.me redirect, optionally on your own domain) creators use to keep them working.",
+      "Why Instagram and TikTok hide or break OnlyFans and Fansly bio links — and the two-layer setup (link-in-bio + a redirect layer like fanfor.me, optionally on your own domain) creators use to keep them working.",
     date: "2026-09-26",
     author: "eighteen1",
     indexLabel: "Bio links that get blocked on Instagram & TikTok",

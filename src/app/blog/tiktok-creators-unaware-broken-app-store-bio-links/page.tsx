@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatPostDate, getPost } from "@/lib/blog/posts";
+import { productUrl } from "@/lib/blog/refs";
 
 const SLUG = "tiktok-creators-unaware-broken-app-store-bio-links";
 
@@ -83,7 +84,7 @@ export default function TikTokCreatorsUnawareBrokenLinksPage() {
             showed &ldquo;Action can&apos;t be completed&rdquo; when tapped from
             TikTok. That&apos;s why we built{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -183,7 +184,7 @@ export default function TikTokCreatorsUnawareBrokenLinksPage() {
           <p>
             We wrote up the device-by-device results in more detail here:{" "}
             <a
-              href="https://pleaseopen.me/is-your-tiktok-bio-link-broken-app-store-play-store-test"
+              href={productUrl("https://pleaseopen.me/is-your-tiktok-bio-link-broken-app-store-play-store-test", SLUG)}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-accent hover:underline"
@@ -239,7 +240,7 @@ export default function TikTokCreatorsUnawareBrokenLinksPage() {
             in-app browser, then sends them to the correct store for their
             device. That&apos;s what{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -275,7 +276,7 @@ export default function TikTokCreatorsUnawareBrokenLinksPage() {
           <p>
             We use{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -294,7 +295,7 @@ export default function TikTokCreatorsUnawareBrokenLinksPage() {
           </p>
           <p>
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               Check and fix your link at pleaseopen.me &rarr;
@@ -310,7 +311,7 @@ export default function TikTokCreatorsUnawareBrokenLinksPage() {
           <ul className="mt-6 space-y-4">
             <li>
               <a
-                href="https://pleaseopen.me/is-your-tiktok-bio-link-broken-app-store-play-store-test"
+                href={productUrl("https://pleaseopen.me/is-your-tiktok-bio-link-broken-app-store-play-store-test", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -363,7 +364,7 @@ export default function TikTokCreatorsUnawareBrokenLinksPage() {
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram"
+                href={productUrl("https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -381,7 +382,7 @@ export default function TikTokCreatorsUnawareBrokenLinksPage() {
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/tiktok-bio-link-appstore-broken"
+                href={productUrl("https://www.pleaseopen.me/blog/tiktok-bio-link-appstore-broken", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -408,7 +409,7 @@ export default function TikTokCreatorsUnawareBrokenLinksPage() {
             Back to blog
           </Link>
           <a
-            href="https://pleaseopen.me"
+            href={productUrl("https://pleaseopen.me", SLUG)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"

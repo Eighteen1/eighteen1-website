@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatPostDate, getPost } from "@/lib/blog/posts";
+import { productUrl } from "@/lib/blog/refs";
 
 const SLUG = "we-built-pleaseopen-me";
 
@@ -112,7 +113,7 @@ export default function WeBuiltPleaseOpenMePage() {
           </h2>
           <p>
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -193,7 +194,7 @@ export default function WeBuiltPleaseOpenMePage() {
           <ul className="list-disc space-y-3 pl-5">
             <li>
               <a
-                href="https://pleaseopen.me/blog/appstore-links-broken-tiktok-instagram"
+                href={productUrl("https://pleaseopen.me/blog/appstore-links-broken-tiktok-instagram", SLUG)}
                 className="font-medium text-accent hover:underline"
               >
                 App Store links failing on TikTok and Instagram
@@ -201,7 +202,7 @@ export default function WeBuiltPleaseOpenMePage() {
             </li>
             <li>
               <a
-                href="https://pleaseopen.me/blog/instagram-appstore-links-blocked"
+                href={productUrl("https://pleaseopen.me/blog/instagram-appstore-links-blocked", SLUG)}
                 className="font-medium text-accent hover:underline"
               >
                 Instagram blocking App Store links
@@ -209,7 +210,7 @@ export default function WeBuiltPleaseOpenMePage() {
             </li>
             <li>
               <a
-                href="https://pleaseopen.me/blog/tiktok-bio-link-appstore-broken"
+                href={productUrl("https://pleaseopen.me/blog/tiktok-bio-link-appstore-broken", SLUG)}
                 className="font-medium text-accent hover:underline"
               >
                 TikTok bio link to the App Store not working
@@ -221,7 +222,7 @@ export default function WeBuiltPleaseOpenMePage() {
           <p>
             Create a free link at{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -239,7 +240,7 @@ export default function WeBuiltPleaseOpenMePage() {
           <ul className="mt-6 space-y-4">
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram"
+                href={productUrl("https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -257,7 +258,7 @@ export default function WeBuiltPleaseOpenMePage() {
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/instagram-appstore-links-blocked"
+                href={productUrl("https://www.pleaseopen.me/blog/instagram-appstore-links-blocked", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -275,7 +276,7 @@ export default function WeBuiltPleaseOpenMePage() {
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/tiktok-bio-link-appstore-broken"
+                href={productUrl("https://www.pleaseopen.me/blog/tiktok-bio-link-appstore-broken", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -340,7 +341,7 @@ export default function WeBuiltPleaseOpenMePage() {
             See our projects
           </Link>
           <a
-            href="https://pleaseopen.me"
+            href={productUrl("https://pleaseopen.me", SLUG)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"

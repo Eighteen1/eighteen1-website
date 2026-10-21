@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatPostDate, getPost } from "@/lib/blog/posts";
+import { productUrl } from "@/lib/blog/refs";
 
 const SLUG = "os-specific-landing-pages-pleaseopen-me";
 
@@ -65,7 +66,7 @@ export default function OsSpecificLandingPagesPleaseOpenMePage() {
             We ran into this ourselves promoting one of our own apps, and
             it&apos;s why we added OS-specific landing states to{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -183,7 +184,7 @@ export default function OsSpecificLandingPagesPleaseOpenMePage() {
           </p>
           <p>
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               Set up your redirect + coming-soon pages &rarr;
@@ -199,7 +200,7 @@ export default function OsSpecificLandingPagesPleaseOpenMePage() {
           <ul className="mt-6 space-y-4">
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram"
+                href={productUrl("https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -217,7 +218,7 @@ export default function OsSpecificLandingPagesPleaseOpenMePage() {
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/privacy-policy-for-indie-app-developers"
+                href={productUrl("https://www.pleaseopen.me/blog/privacy-policy-for-indie-app-developers", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -235,7 +236,7 @@ export default function OsSpecificLandingPagesPleaseOpenMePage() {
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/app-ads-txt-explained"
+                href={productUrl("https://www.pleaseopen.me/blog/app-ads-txt-explained", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -262,7 +263,7 @@ export default function OsSpecificLandingPagesPleaseOpenMePage() {
             See our projects
           </Link>
           <a
-            href="https://pleaseopen.me"
+            href={productUrl("https://pleaseopen.me", SLUG)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"

@@ -8,6 +8,7 @@ import {
   formatPostDate,
   getPost,
 } from "@/lib/blog/posts";
+import { productUrl } from "@/lib/blog/refs";
 
 const SLUG = "warum-tiktok-instagram-app-store-links-blockieren-pleaseopen-me";
 
@@ -86,7 +87,7 @@ export default function TikTokInstagramBlockingDePage() {
             Wir sind bei der Vermarktung unserer eigenen Apps auf genau dieses
             Problem gestoßen und haben deshalb{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -336,7 +337,7 @@ export default function TikTokInstagramBlockingDePage() {
           <p>
             Öffne{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -441,7 +442,7 @@ export default function TikTokInstagramBlockingDePage() {
             Wenn du einen einzelnen Link für deine App einrichten möchtest,
             kannst du mit{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://pleaseopen.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
               pleaseopen.me
@@ -488,7 +489,7 @@ export default function TikTokInstagramBlockingDePage() {
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram"
+                href={productUrl("https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
@@ -524,7 +525,7 @@ export default function TikTokInstagramBlockingDePage() {
             Unsere Projekte
           </Link>
           <a
-            href="https://pleaseopen.me/claim"
+            href={productUrl("https://pleaseopen.me/claim", SLUG)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"

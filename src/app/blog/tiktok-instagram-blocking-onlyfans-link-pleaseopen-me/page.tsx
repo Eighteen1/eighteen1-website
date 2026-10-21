@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { formatPostDate, getPost } from "@/lib/blog/posts";
+import { productUrl } from "@/lib/blog/refs";
 
 const SLUG = "tiktok-instagram-blocking-onlyfans-link-pleaseopen-me";
 
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
   title:
     "How to Stop Instagram and TikTok From Blocking Your OnlyFans Link in 2026",
   description:
-    "Why Instagram and TikTok hide or break OnlyFans and Fansly bio links — and the two-layer setup (link-in-bio + pleaseopen.me redirect, optionally on your own domain) creators use to keep them working.",
+    "Why Instagram and TikTok hide or break OnlyFans and Fansly bio links — and the two-layer setup (link-in-bio + a redirect layer like fanfor.me, optionally on your own domain) creators use to keep them working.",
   alternates: {
     canonical: `https://eighteen1.com/blog/${SLUG}`,
   },
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     title:
       "How to Stop Instagram and TikTok From Blocking Your OnlyFans Link in 2026",
     description:
-      "Why Instagram and TikTok hide or break OnlyFans and Fansly bio links — and how a link-in-bio page plus pleaseopen.me keeps them working.",
+      "Why Instagram and TikTok hide or break OnlyFans and Fansly bio links — and how a link-in-bio page plus fanfor.me keeps them working.",
     type: "article",
     url: `https://eighteen1.com/blog/${SLUG}`,
     publishedTime: "2026-09-26",
@@ -67,13 +68,13 @@ export default function OnlyFansLinkBlockingPage() {
             setup that creators are actually using in 2026 to keep their bio
             link working reliably — including{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://fanfor.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
-              pleaseopen.me
-            </a>{" "}
-            as the redirect layer that gets visitors out of restrictive in-app
-            browsers.
+              fanfor.me
+            </a>
+            , a link tool built specifically for adult creators, as the redirect
+            layer that gets visitors out of restrictive in-app browsers.
           </p>
 
           <h2 className="pt-4 text-2xl font-bold text-foreground">
@@ -89,12 +90,11 @@ export default function OnlyFansLinkBlockingPage() {
             </strong>{" "}
             Instagram and TikTok don&apos;t manually review every bio link.
             Instead, they run automated systems that assign a reputation score
-            to the <em>domain</em> a link points to. A domain that&apos;s been
-            widely associated with adult content — like onlyfans.com or
-            fansly.com directly — gets flagged at the domain level. Once that
-            happens, links to it can be hidden, deprioritized, or blocked
-            outright, regardless of what the individual creator&apos;s account
-            looks like.
+            to the domain a link points to. A domain that&apos;s been widely
+            associated with adult content — like onlyfans.com or fansly.com
+            directly — gets flagged at the domain level. Once that happens,
+            links to it can be hidden, deprioritized, or blocked outright,
+            regardless of what the individual creator&apos;s account looks like.
           </p>
           <p>
             <strong className="font-semibold text-foreground">
@@ -143,10 +143,10 @@ export default function OnlyFansLinkBlockingPage() {
             similar multi-button landing page — as the single link Instagram
             sees in your profile.{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://fanfor.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
-              pleaseopen.me
+              fanfor.me
             </a>{" "}
             can also serve as that multi-button page if you want both layers in
             one product.
@@ -158,10 +158,10 @@ export default function OnlyFansLinkBlockingPage() {
               socials) behind one bio link, which you&apos;d want anyway.
             </li>
             <li>
-              It means the <em>domain Instagram scans</em> is your link-in-bio
-              tool&apos;s domain, not onlyfans.com directly — an important
-              distinction, since it&apos;s the destination domain that
-              reputation scoring evaluates.
+              It means the domain Instagram scans is your link-in-bio tool&apos;s
+              domain, not onlyfans.com directly — an important distinction,
+              since it&apos;s the destination domain that reputation scoring
+              evaluates.
             </li>
           </ul>
           <p>
@@ -179,57 +179,56 @@ export default function OnlyFansLinkBlockingPage() {
             Inside your link-in-bio page, instead of linking your OnlyFans
             button directly to onlyfans.com/yourname, create a{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://fanfor.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
-              pleaseopen.me
+              fanfor.me
             </a>{" "}
-            redirect link and use that as the button&apos;s destination.
+            link and use that as the button&apos;s destination.
           </p>
           <p>When someone taps that button, here&apos;s what happens:</p>
           <ol className="list-decimal space-y-3 pl-5">
             <li>
-              The click goes to your pleaseopen.me redirect link first.
+              The click goes to your fanfor.me link first. Platform previews and
+              crawlers only see a plain page, with your adult destination left
+              out.
             </li>
             <li>
-              The redirect page detects that the user is inside a restrictive
-              in-app browser (like Instagram&apos;s).
+              fanfor.me detects that the user is inside a restrictive in-app
+              browser (Instagram, TikTok, X, Snapchat and others).
             </li>
             <li>
-              It prompts the user to open the link in their device&apos;s actual
-              default browser (Safari, Chrome, etc.) instead of continuing
-              inside the app.
+              It moves the user into their device&apos;s actual default browser
+              (Safari, Chrome, etc.) instead of continuing inside the app.
             </li>
             <li>
-              From there, the user lands on your actual OnlyFans (or other adult
-              platform) page in a normal, unrestricted browser.
+              The fan confirms they&apos;re 18+, then lands on your actual
+              OnlyFans (or other adult platform) page in a normal, unrestricted
+              browser.
             </li>
           </ol>
           <p>
             This matters because a lot of the content-scanning and link-warning
-            behavior that creators run into is specific to the{" "}
-            <em>in-app browser</em>, not the destination page itself. Getting
-            the user out of that in-app browser before they ever reach your
-            adult content page sidesteps a meaningful part of the detection
-            layer entirely.
+            behavior that creators run into is specific to the in-app browser,
+            not the destination page itself. Getting the user out of that in-app
+            browser before they ever reach your adult content page sidesteps a
+            meaningful part of the detection layer entirely.
           </p>
           <p>
             Worth knowing:{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://fanfor.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
-              pleaseopen.me
+              fanfor.me
             </a>{" "}
-            was originally built to help app developers get their App Store and
-            Play Store links past Instagram and TikTok&apos;s in-app browser
-            restrictions, since those platforms block a wide range of links from
-            opening properly in-app — not just adult content ones. The same
-            underlying mechanism that helps an app install link open correctly
-            works just as well for any link that needs to escape a restrictive
-            in-app browser, which is why it applies just as cleanly to an
-            OnlyFans or Fansly link. It&apos;s free to use, and setup takes a
-            few minutes with no coding required.
+            was built specifically for adult creators. On top of the in-app
+            browser escape and the crawler-safe link, it adds an 18+ age check
+            in front of your destination, emails you if a link goes down, and
+            shows you which apps your fans came from and how many made it out of
+            the in-app browser. You can try it free for 7 days with no payment
+            details needed, and setup takes a few minutes with no coding
+            required.
           </p>
 
           <h3 className="pt-2 text-xl font-bold text-foreground">
@@ -239,8 +238,14 @@ export default function OnlyFansLinkBlockingPage() {
             Once the two-layer setup above is working, the next improvement is
             connecting your own domain — something you can register cheaply
             through a registrar like United Domains or GoDaddy — and using it as
-            a custom domain for <em>both</em> your link-in-bio landing page and
-            your pleaseopen.me redirect link.
+            a custom domain for both your link-in-bio landing page and your{" "}
+            <a
+              href={productUrl("https://fanfor.me", SLUG)}
+              className="font-medium text-accent hover:underline"
+            >
+              fanfor.me
+            </a>{" "}
+            link.
           </p>
           <p>Why this helps:</p>
           <ul className="list-disc space-y-3 pl-5">
@@ -272,9 +277,7 @@ export default function OnlyFansLinkBlockingPage() {
           <h2 className="pt-4 text-2xl font-bold text-foreground">
             Putting It Together: The Full Flow
           </h2>
-          <p>
-            Here&apos;s what the complete setup looks like end to end:
-          </p>
+          <p>Here&apos;s what the complete setup looks like end to end:</p>
           <p>
             <strong className="font-semibold text-foreground">
               Instagram/TikTok bio
@@ -286,10 +289,10 @@ export default function OnlyFansLinkBlockingPage() {
             (ideally on your own custom domain) → OnlyFans button on that page
             links to your{" "}
             <strong className="font-semibold text-foreground">
-              pleaseopen.me redirect
+              fanfor.me link
             </strong>{" "}
-            (also on your own custom domain) → redirect prompts the user out of
-            the in-app browser → user lands on your{" "}
+            → fanfor.me moves the user out of the in-app browser and asks them
+            to confirm they&apos;re 18+ → user lands on your{" "}
             <strong className="font-semibold text-foreground">
               actual OnlyFans/adult content page
             </strong>{" "}
@@ -326,17 +329,16 @@ export default function OnlyFansLinkBlockingPage() {
                 It doesn&apos;t change platform policy.
               </strong>{" "}
               TikTok in particular has stated that linking to OnlyFans, even
-              indirectly, can violate its terms. This setup addresses the{" "}
-              <em>technical</em> detection layer, not the <em>policy</em> one —
-              creators should weigh that when deciding how to structure their
-              bio.
+              indirectly, can violate its terms. This setup addresses the
+              technical detection layer, not the policy one — creators should
+              weigh that when deciding how to structure their bio.
             </li>
             <li>
               <strong className="font-semibold text-foreground">
                 Results vary by account and platform.
               </strong>{" "}
-              Account history, how the account has been flagged before, and
-              which platform you&apos;re on all affect outcomes.
+              Account history, how the account has been flagged before, and which
+              platform you&apos;re on all affect outcomes.
             </li>
           </ul>
 
@@ -354,23 +356,22 @@ export default function OnlyFansLinkBlockingPage() {
           </p>
           <p>
             <strong className="font-semibold text-foreground">
-              Is pleaseopen.me free to use?
+              Is fanfor.me free to use?
             </strong>
           </p>
           <p>
-            Yes.{" "}
+            You can try{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://fanfor.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
-              pleaseopen.me
+              fanfor.me
             </a>{" "}
-            is free, and was originally designed for app developers who needed
-            their App Store or Play Store links to open correctly outside
-            Instagram and TikTok&apos;s in-app browsers. That same core function
-            — forcing a link out of a restrictive in-app browser — is what makes
-            it work for any content type that runs into the same restriction,
-            adult content included.
+            free for 7 days with no payment details needed. After that it&apos;s
+            a small monthly or yearly subscription, only if you choose to
+            continue. It was built specifically for adult creators, so the
+            in-app browser escape, crawler-safe link, 18+ age check, link health
+            alerts and traffic analytics are all part of the core product.
           </p>
           <p>
             <strong className="font-semibold text-foreground">
@@ -378,10 +379,10 @@ export default function OnlyFansLinkBlockingPage() {
             </strong>
           </p>
           <p>
-            No. Link-in-bio tools and pleaseopen.me are both designed to be set
-            up without any technical background — connecting a custom domain is
-            the only part that involves a bit of DNS configuration, and most
-            domain registrars walk you through that step by step.
+            No. Link-in-bio tools and fanfor.me are both designed to be set up
+            without any technical background — connecting a custom domain is the
+            only part that involves a bit of DNS configuration, and most domain
+            registrars walk you through that step by step.
           </p>
           <p>
             <strong className="font-semibold text-foreground">
@@ -403,13 +404,15 @@ export default function OnlyFansLinkBlockingPage() {
             If you&apos;re a creator dealing with your OnlyFans or adult content
             link getting blocked, hidden, or flagged on Instagram or TikTok,{" "}
             <a
-              href="https://pleaseopen.me"
+              href={productUrl("https://fanfor.me", SLUG)}
               className="font-medium text-accent hover:underline"
             >
-              pleaseopen.me
+              fanfor.me
             </a>{" "}
-            is built to solve the in-app-browser piece of this problem — free to
-            use, and ready in a few minutes. Set up your first redirect link and
+            is built specifically for adult creators to solve this — it gets fans
+            out of the in-app browser, keeps your adult destination out of
+            platform previews, adds an 18+ age check, and alerts you if a link
+            breaks. Try it free for 7 days with no payment details needed, and
             pair it with your link-in-bio tool of choice to get your full setup
             running today.
           </p>
@@ -418,60 +421,40 @@ export default function OnlyFansLinkBlockingPage() {
         <aside className="mt-14 border-t border-border pt-10">
           <h2 className="text-xl font-bold text-foreground">Further reading</h2>
           <p className="mt-2 text-sm text-muted">
-            More on in-app browser blocks and bio links from pleaseopen.me:
+            More on bio links for adult creators:
           </p>
           <ul className="mt-6 space-y-4">
             <li>
-              <a
-                href="https://www.pleaseopen.me/blog/appstore-links-broken-tiktok-instagram"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/blog/best-link-in-bio-for-onlyfans-creators-2026"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
               >
                 <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                  pleaseopen.me
+                  eighteen1
                 </span>
                 <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
-                  App Store links failing on TikTok and Instagram
+                  Best link in bio for OnlyFans creators in 2026
                 </span>
                 <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
                   Read more &rarr;
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
-                href="https://www.pleaseopen.me/blog/instagram-appstore-links-blocked"
+                href={productUrl("https://fanfor.me", SLUG)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
               >
                 <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                  pleaseopen.me
+                  fanfor.me
                 </span>
                 <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
-                  Instagram blocking App Store links
+                  A bio link built for adult creators — try 7 days free
                 </span>
                 <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
-                  Read more &rarr;
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.pleaseopen.me/blog/tiktok-bio-link-appstore-broken"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block rounded-2xl border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surface-hover"
-              >
-                <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                  pleaseopen.me
-                </span>
-                <span className="mt-2 block text-sm font-semibold text-foreground transition-colors group-hover:text-accent">
-                  TikTok bio link to the App Store not working
-                </span>
-                <span className="mt-3 inline-block text-sm font-medium text-accent group-hover:underline">
-                  Read more &rarr;
+                  Open fanfor.me &rarr;
                 </span>
               </a>
             </li>
@@ -486,12 +469,12 @@ export default function OnlyFansLinkBlockingPage() {
             Back to blog
           </Link>
           <a
-            href="https://pleaseopen.me"
+            href={productUrl("https://fanfor.me", SLUG)}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
           >
-            Open pleaseopen.me
+            Open fanfor.me
           </a>
         </footer>
       </div>
